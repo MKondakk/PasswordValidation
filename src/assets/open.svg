@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 80"
+   fill="none"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="open.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="10.2625"
+     inkscape:cx="32.009744"
+     inkscape:cy="32.204629"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M32 20C25.3726 20 20 25.3726 20 32C20 38.6274 25.3726 44 32 44C38.6274 44 44 38.6274 44 32C44 25.3726 38.6274 20 32 20ZM24 32C24 27.5817 27.5817 24 32 24C36.4183 24 40 27.5817 40 32C40 36.4183 36.4183 40 32 40C27.5817 40 24 36.4183 24 32Z"
+     fill="black"
+     id="path1" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M53.8576 21.1853C47.9102 13.8012 40.0104 10 32 10C23.9896 10 16.0898 13.8012 10.1424 21.1853L2.44239 30.7455C1.85254 31.4778 1.85254 32.5222 2.44239 33.2545L10.1424 42.8147C16.0898 50.1988 23.9896 54 32 54C40.0104 54 47.9102 50.1988 53.8576 42.8147L61.5576 33.2545C62.1475 32.5222 62.1475 31.4778 61.5576 30.7455L53.8576 21.1853ZM13.2576 23.6944C18.5216 17.1587 25.3161 14 32 14C38.6839 14 45.4784 17.1587 50.7424 23.6944L57.432 32L50.7424 40.3056C45.4784 46.8413 38.6839 50 32 50C25.3161 50 18.5216 46.8413 13.2576 40.3056L6.56804 32L13.2576 23.6944Z"
+     fill="black"
+     id="path2" />
+</svg>
