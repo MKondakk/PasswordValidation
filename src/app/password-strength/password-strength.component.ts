@@ -1,40 +1,42 @@
 import { Component } from '@angular/core';
+import { PasswordStrengthService } from '../password-strength.service';
 
 @Component({
   selector: 'app-password-strength',
   templateUrl: './password-strength.component.html',
-  styleUrls: ['./password-strength.component.css']
+  styleUrls: ['./password-strength.component.css'],
 })
 export class PasswordStrengthComponent {
-  password: string = '';
+  password = '';
+
   strengthColor: string[] = ['gray', 'gray', 'gray'];
-  feedbackMessage: string = '';
-  showPassword: boolean = false;
+
+  feedbackMessage = '';
+
+  showPassword = false;
+
+  constructor(private passwordStrengthService: PasswordStrengthService) {}
 
   checkPasswordStrength() {
-    if (this.password === '') {
-      this.strengthColor = ['gray', 'gray', 'gray'];
-      this.feedbackMessage = ''; 
-    } else if (this.password.length < 8) {
-      this.strengthColor = ['red', 'red', 'red'];
-      this.feedbackMessage = 'Password should be at least 8 characters.';
-    } else if (/[a-zA-Z]/.test(this.password) && /[0-9]/.test(this.password) && /[^a-zA-Z0-9]/.test(this.password)) {
-      this.strengthColor = ['green', 'green', 'green'];
+    const colors = this.passwordStrengthService.checkPasswordStrength(
+      this.password,
+    );
+    this.strengthColor = colors;
+
+    if (colors[2] === 'green') {
       this.feedbackMessage = 'Password is strong :)';
-    } else if ((/[a-zA-Z]/.test(this.password) && /[^a-zA-Z0-9]/.test(this.password)) ||
-               (/[a-zA-Z]/.test(this.password) && /[0-9]/.test(this.password)) ||
-               (/[^a-zA-Z0-9]/.test(this.password) && /[0-9]/.test(this.password))) {
-      this.strengthColor = ['yellow', 'yellow', 'gray'];
-      this.feedbackMessage = 'Make sure your password contains combination of letters, numbers, and symbols.';
+    } else if (
+      colors[0] === 'gray' &&
+      colors[1] === 'gray' &&
+      colors[2] === 'gray'
+    ) {
+      this.feedbackMessage = '';
     } else {
-      this.strengthColor = ['red', 'gray', 'gray'];
-      this.feedbackMessage = 'Password is weak. Use a combination of letters, numbers, and symbols.';
+      this.feedbackMessage =
+        'Make sure your password is more than 8 characters, contains a combination of letters, numbers, and symbols.';
     }
-    let updatedStrengthColor: string[];
-    setTimeout(() => {
-      this.strengthColor = updatedStrengthColor;
-    }, 200);
   }
+
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
